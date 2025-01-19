@@ -1,7 +1,7 @@
 # RAPTOR
 
 <p align="center">
-  <img src="raptor.png" alt="RAPTOR Banner">
+  <img src="raptor.png" alt="RAPTOR Banner" width="401">
 </p>
 
 **R**apid **A**PI **T**esting and **O**peration **R**econnaissance
