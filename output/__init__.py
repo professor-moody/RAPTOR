@@ -1,2 +1,3 @@
-# output/__init__.py
 from .formatter import OutputFormatter
+
+__all__ = ['OutputFormatter']

@@ -5,6 +5,7 @@ import json
 import yaml
 import logging
 import sys
+import asyncio
 import concurrent.futures
 from typing import Dict, List, Set, Optional, Any
 from urllib.parse import urljoin, urlparse
@@ -16,40 +17,30 @@ from colorama import Fore, Style
 from datetime import datetime
 import argparse
 
+# Local imports
+from core.collector import EnhancedDataCollector
+from graphql.analyzer import GraphQLAnalyzer
+from output.formatter import OutputFormatter
+from logic_mapping.patterns import PatternMatcher
+
+
 # Initialize colorama for cross-platform color support
 colorama.init()
-
-class OutputFormatter:
-    @staticmethod
-    def success(message: str) -> str:
-        return f"{Fore.GREEN}[+] {message}{Style.RESET_ALL}"
-    
-    @staticmethod
-    def info(message: str) -> str:
-        return f"{Fore.BLUE}[*] {message}{Style.RESET_ALL}"
-    
-    @staticmethod
-    def warning(message: str) -> str:
-        return f"{Fore.YELLOW}[!] {message}{Style.RESET_ALL}"
-    
-    @staticmethod
-    def error(message: str) -> str:
-        return f"{Fore.RED}[-] {message}{Style.RESET_ALL}"
 
 def print_banner():
     """Print the RAPTOR tool banner with colors"""
     banner = f"""
 {Fore.CYAN}╭──────────────────────────────────────────────────────────────╮
 │{Style.RESET_ALL}                                                              {Fore.CYAN}│
-│   {Fore.RED}██████╗   █████╗  ██████╗ ████████╗ █████╗ ██████╗  {Fore.CYAN}│
-│   {Fore.RED}██╔══██╗ ██╔══██╗ ██╔══██╗╚══██╔══╝██╔══██╗██╔══██╗ {Fore.CYAN}│
-│   {Fore.RED}██████╔╝ ███████║ ██████╔╝   ██║   ██║  ██║██████╔╝ {Fore.CYAN}│
-│   {Fore.RED}██╔══██╗ ██╔══██║ ██╔═══╝    ██║   ██║  ██║██╔══██╗ {Fore.CYAN}│
-│   {Fore.RED}██║  ██║ ██║  ██║ ██║        ██║   ╚█████╔╝██║  ██║ {Fore.CYAN}│
-│   {Fore.RED}╚═╝  ╚═╝ ╚═╝  ╚═╝ ╚═╝        ╚═╝    ╚════╝ ╚═╝  ╚═╝ {Fore.CYAN}│
-│{Style.RESET_ALL}                                                {Fore.CYAN}│
+│   {Fore.RED}██████╗   █████╗  ██████╗ ████████╗ █████╗ ██████╗       {Fore.CYAN}│
+│   {Fore.RED}██╔══██╗ ██╔══██╗ ██╔══██╗╚══██╔══╝██╔══██╗██╔══██╗      {Fore.CYAN}│
+│   {Fore.RED}██████╔╝ ███████║ ██████╔╝   ██║   ██║  ██║██████╔╝      {Fore.CYAN}│
+│   {Fore.RED}██╔══██╗ ██╔══██║ ██╔═══╝    ██║   ██║  ██║██╔══██╗      {Fore.CYAN}│
+│   {Fore.RED}██║  ██║ ██║  ██║ ██║        ██║   ╚█████╔╝██║  ██║      {Fore.CYAN}│
+│   {Fore.RED}╚═╝  ╚═╝ ╚═╝  ╚═╝ ╚═╝        ╚═╝    ╚════╝ ╚═╝  ╚═╝      {Fore.CYAN}│
+│{Style.RESET_ALL}                                                              {Fore.CYAN}│
 ├──────────────────────────────────────────────────────────────┤
-│{Fore.WHITE}      Rapid API Testing and Operation Reconnaissance v2.0     {Fore.CYAN}│
+│{Fore.WHITE}      Rapid API Testing and Operation Reconnaissance v1.0     {Fore.CYAN}│
 ├──────────────────────────────────────────────────────────────┤
 │{Fore.YELLOW}  [*] API Discovery  [*] Auth Detection  [*] Schema Analysis  {Fore.CYAN}│
 ╰──────────────────────────────────────────────────────────────╯{Style.RESET_ALL}
@@ -59,7 +50,7 @@ def print_banner():
 class RAPTOR:
     """RAPTOR - Rapid API Testing and Operation Reconnaissance"""
     
-    def __init__(self, base_url: str, wordlist_path: Optional[str] = None):
+    def __init__(self, base_url: str, wordlist_path: Optional[str] = None, options: Dict = None):
         self.base_url = base_url.rstrip('/')
         self.session = self._setup_session()
         self.discovered_endpoints: Set[str] = set()
@@ -70,6 +61,8 @@ class RAPTOR:
         self.formatter = OutputFormatter()
         self.workflows: Dict[str, List[Dict]] = {}
         self._discovered_auth_methods: Set[str] = set()
+        self.options = options or {}
+        self.graphql_results = {}
         
         # Load wordlist
         self.wordlist = self._load_wordlist(wordlist_path)
@@ -139,12 +132,25 @@ class RAPTOR:
             
             if self.discovered_endpoints:
                 print(self.formatter.info("\nStarting detailed analysis..."))
-                self.check_auth_methods()  # Updated method name
+                
+                # Run authentication detection
+                if not self.options.get('no_auth'):
+                    self.check_auth_methods()
+                
+                # Find and parse documentation
                 self._find_documentation()
+                
+                # Analyze parameters and versions
                 self._analyze_parameters()
                 self._detect_versions()
-                self._check_graphql()
-                self._map_business_logic()
+                
+                # GraphQL analysis
+                if not self.options.get('skip_graphql'):
+                    self._analyze_graphql()
+                
+                # Business logic mapping
+                if not self.options.get('no_business_logic'):
+                    self._map_business_logic()
             
             return self._generate_report()
             
@@ -168,7 +174,7 @@ class RAPTOR:
                 continue
 
         # Then try wordlist-based discovery
-        with ThreadPoolExecutor(max_workers=10) as executor:
+        with ThreadPoolExecutor(max_workers=self.options.get('threads', 10)) as executor:
             futures = []
             for word in self.wordlist:
                 url = urljoin(self.base_url, word)
@@ -201,6 +207,34 @@ class RAPTOR:
         except requests.RequestException:
             pass
         return None
+
+    def _analyze_graphql(self):
+        """Analyze GraphQL endpoints with enhanced detection"""
+        print(self.formatter.info("\nAnalyzing GraphQL endpoints..."))
+        
+        graphql_analyzer = GraphQLAnalyzer(
+            session=self.session,
+            base_url=self.base_url,
+            formatter=self.formatter
+        )
+        
+        self.graphql_results = graphql_analyzer.analyze()
+        
+        # Add discovered GraphQL endpoints to main set
+        if 'endpoints' in self.graphql_results:
+            for url, info in self.graphql_results['endpoints'].items():
+                if info.get('is_graphql'):
+                    self.discovered_endpoints.add(url)
+                    print(self.formatter.success(f"Confirmed GraphQL endpoint: {url}"))
+        
+        # Report vulnerabilities
+        if 'vulnerabilities' in self.graphql_results:
+            print(self.formatter.info("\nGraphQL Vulnerabilities:"))
+            for vuln in self.graphql_results['vulnerabilities']:
+                severity = vuln.get('severity', 'UNKNOWN')
+                print(self.formatter.warning(
+                    f"[{severity}] {vuln['type']} in {vuln.get('url', 'Unknown endpoint')}"
+                ))
 
     def check_auth_methods(self):
         """Enhanced authentication method detection"""
@@ -600,69 +634,6 @@ class RAPTOR:
                     f"Detected version {matches[0]} in {endpoint}"
                 ))
 
-    def _check_graphql(self):
-        """Check for GraphQL endpoints"""
-        print(self.formatter.info("\nChecking for GraphQL..."))
-        
-        headers = {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        }
-
-        # Simpler introspection query
-        introspection_query = {
-            'query': '{ __schema { queryType { name } } }'
-        }
-        
-        graphql_endpoints = ['/graphql', '/api/graphql', '/query', '/api/query']
-        
-        for endpoint in graphql_endpoints:
-            url = urljoin(self.base_url, endpoint)
-            try:
-                # First, do a simple GET request
-                response = self.session.get(url, headers=headers, timeout=10)
-                
-                # Handle rate limiting explicitly
-                if response.status_code == 429:
-                    print(self.formatter.warning(f"Rate limited at {url}, skipping..."))
-                    continue
-                    
-                # Skip if clearly not a GraphQL endpoint
-                if response.status_code not in [200, 400, 405]:
-                    continue
-
-                # Try POST with introspection
-                try:
-                    response = self.session.post(
-                        url, 
-                        json=introspection_query,
-                        headers=headers,
-                        timeout=10
-                    )
-                    
-                    if response.status_code == 429:
-                        print(self.formatter.warning(f"Rate limited at {url}, skipping..."))
-                        continue
-
-                    # Validate response
-                    if response.status_code == 200:
-                        try:
-                            data = response.json()
-                            # Check for GraphQL-specific markers
-                            if 'data' in data or 'errors' in data:
-                                print(self.formatter.success(f"Found GraphQL endpoint at {url}"))
-                                self.discovered_endpoints.add(url)
-                        except json.JSONDecodeError:
-                            continue
-                            
-                except requests.RequestException:
-                    continue
-
-            except requests.RequestException as e:
-                if isinstance(e, requests.exceptions.RequestException):
-                    if e.response is not None and e.response.status_code not in [404, 429]:
-                        print(self.formatter.warning(f"Error checking {url}: {str(e)}"))
-
     def _map_business_logic(self):
         """Map business logic and workflows"""
         print(self.formatter.info("\nMapping business logic..."))
@@ -699,10 +670,9 @@ class RAPTOR:
                 print(self.formatter.success(
                     f"Discovered potential {pattern_name} workflow: {', '.join(matching_endpoints)}"
                 ))
-
     def _generate_report(self) -> Dict[str, Any]:
         """Generate detailed scan report"""
-        return {
+        report = {
             'scan_info': {
                 'base_url': self.base_url,
                 'scan_time': datetime.now().isoformat(),
@@ -729,6 +699,17 @@ class RAPTOR:
             }
         }
 
+        # Add GraphQL results if any were found
+        if self.graphql_results:
+            report['graphql'] = {
+                'endpoints': list(self.graphql_results.get('endpoints', {}).keys()),
+                'vulnerabilities': self.graphql_results.get('vulnerabilities', []),
+                'schema_analysis': self.graphql_results.get('schema_analysis', {}),
+                'test_results': self.graphql_results.get('test_results', {})
+            }
+
+        return report
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -749,6 +730,10 @@ def main():
                         help='Skip authentication detection')
     parser.add_argument('--no-business-logic', action='store_true',
                         help='Skip business logic mapping')
+    parser.add_argument('--skip-graphql', action='store_true',
+                        help='Skip GraphQL analysis')
+    parser.add_argument('--graphql-tests', action='store_true',
+                        help='Run detailed GraphQL security tests')
 
     args = parser.parse_args()
 
@@ -763,8 +748,18 @@ def main():
     print_banner()
 
     try:
-        # Initialize RAPTOR
-        raptor = RAPTOR(args.url, args.wordlist)
+        # Initialize RAPTOR with options
+        options = {
+            'threads': args.threads,
+            'timeout': args.timeout,
+            'no_auth': args.no_auth,
+            'no_business_logic': args.no_business_logic,
+            'skip_graphql': args.skip_graphql,
+            'graphql_tests': args.graphql_tests,
+            'verbose': args.verbose
+        }
+        
+        raptor = RAPTOR(args.url, args.wordlist, options)
         
         # Start scan
         print(OutputFormatter.info(f"Starting scan of {args.url}"))
@@ -780,6 +775,22 @@ def main():
             print("\nScan Summary:")
             print(f"Endpoints discovered: {len(results['endpoints']['listing'])}")
             print(f"Auth methods found: {len(results['authentication']['methods_detected'])}")
+            
+            # Print GraphQL findings if present
+            if 'graphql' in results:
+                graphql_results = results['graphql']
+                print(f"GraphQL endpoints found: {len(graphql_results['endpoints'])}")
+                if 'vulnerabilities' in graphql_results:
+                    print(f"GraphQL vulnerabilities: {len(graphql_results['vulnerabilities'])}")
+                    
+                    # Print high-severity GraphQL findings
+                    high_sev_vulns = [v for v in graphql_results['vulnerabilities'] 
+                                    if v.get('severity', '').upper() == 'HIGH']
+                    if high_sev_vulns:
+                        print("\nHigh Severity GraphQL Findings:")
+                        for vuln in high_sev_vulns:
+                            print(f"- {vuln['type']} in {vuln.get('url', 'Unknown endpoint')}")
+
             if 'business_logic' in results:
                 print(f"Workflows detected: {len(results['business_logic']['workflows_detected'])}")
         else:
@@ -793,7 +804,6 @@ def main():
         if args.verbose:
             logging.exception("Detailed error information:")
         sys.exit(1)
-
 
 if __name__ == '__main__':
     main()
