@@ -127,10 +127,6 @@ Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTIN
 - [ ] API behavior monitoring
 - [ ] Integration with other security tools
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - Designed to be a project for learning python.
