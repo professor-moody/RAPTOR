@@ -1,0 +1,1223 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>RAPTOR Scan Report - https://swapi.co</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 20px;
+                    background-color: #f5f5f5;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    background-color: white;
+                    padding: 20px;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                }
+                .header {
+                    text-align: center;
+                    padding: 20px 0;
+                    border-bottom: 2px solid #eee;
+                }
+                .section {
+                    margin: 20px 0;
+                    padding: 20px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                }
+                .finding {
+                    margin: 10px 0;
+                    padding: 10px;
+                    border-left: 4px solid #ccc;
+                }
+                .high {
+                    border-left-color: #dc3545;
+                }
+                .medium {
+                    border-left-color: #ffc107;
+                }
+                .low {
+                    border-left-color: #17a2b8;
+                }
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+                th, td {
+                    padding: 8px;
+                    text-align: left;
+                    border-bottom: 1px solid #ddd;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <h1>RAPTOR Scan Report</h1>
+                    <p>Target: https://swapi.co</p>
+                    <p>Scan Time: 2025-01-23T16:40:57.446073</p>
+                </div>
+
+                <div class="section">
+                    <h2>Summary</h2>
+                    <table>
+                        <tr>
+                            <td>Endpoints Discovered</td>
+                            <td>287</td>
+                        </tr>
+                        <tr>
+                            <td>Authentication Methods</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Vulnerabilities Found</td>
+                            <td>83</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="section">
+                    <h2>Authentication Findings</h2>
+                    <table><tr><th>Method</th><th>Endpoints</th></tr>
+            <tr>
+                <td>AWS</td>
+                <td><ul><li>api/admin.json</li><li>api/api</li><li>api/auth.xml</li><li>api/beta</li><li>api/dev.xml</li><li>api/graphql.xml</li><li>api/internal.xml</li><li>api/login.json</li><li>api/oauth</li><li>api/prod</li><li>api/rest.json</li><li>api/soap.xml</li><li>api/stage.xml</li><li>api/test</li><li>api/user.xml</li><li>api/v2</li><li>internal</li><li>soap</li><li>stage.xml</li><li>test.xml</li><li>v1/admin</li><li>v1/beta</li><li>v1/dev.xml</li><li>v1/graphql.xml</li><li>v1/login.xml</li><li>v1/oauth</li><li>v1/prod</li><li>v1/rest</li><li>v2/auth.xml</li><li>v2/user.json</li><li>v2/v3.json</li></ul></td>
+            </tr>
+            </table>
+                </div>
+
+                <div class="section">
+                    <h2>Fuzzing Results</h2>
+                    
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/v2/v3.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/v2/v3.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/graphql.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/rest/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/dev.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/api</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/graphql.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/rest/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/dev.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/rest.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/prod/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/graphql.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/user.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/api</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/prod/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/graphql.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/internal/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/user.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/internal/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/stage.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/stage.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/test</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/rest.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/auth.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/v2/stage/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/test</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/rest.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/v2/auth.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/auth.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/v2/stage/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/stage.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/admin</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/v2/user.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/v2/auth.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/user</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/admin</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/v2/user.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/soap</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/user</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/soap</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/admin.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/beta</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/test.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/admin.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/test.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/test.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/soap.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/test.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/beta</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/test.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/test.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/v1.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/login.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/soap.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/v1.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/login.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/oauth/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/v2/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/oauth/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/oauth</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/dev.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/login.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/v2/login/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/dev.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/login.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/v1/dev/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/v2/login/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/oauth/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/prod.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/oauth/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/prod</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/prod.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/oauth.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/internal/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/internal.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/prod</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/beta/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_put</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/beta.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "PUT",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/internal.xml</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/beta/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/internal/</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/internal.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+            <div class="finding medium">
+                <h3>[MEDIUM] dangerous_method_delete</h3>
+                <p><strong>URL:</strong> https://swapi.co/api/beta.json</p>
+                <p><strong>Details:</strong></p>
+                <pre>{
+  "method": "DELETE",
+  "status_code": 404
+}</pre>
+            </div>
+            
+                </div>
+
+                <div class="section">
+                    <h2>Discovered Endpoints</h2>
+                    <pre>[
+  "https://swapi.co/admin",
+  "https://swapi.co/admin.json",
+  "https://swapi.co/admin.xml",
+  "https://swapi.co/admin/",
+  "https://swapi.co/api",
+  "https://swapi.co/api.json",
+  "https://swapi.co/api.xml",
+  "https://swapi.co/api/",
+  "https://swapi.co/api/admin",
+  "https://swapi.co/api/admin.json",
+  "https://swapi.co/api/admin.xml",
+  "https://swapi.co/api/api",
+  "https://swapi.co/api/api.json",
+  "https://swapi.co/api/api.xml",
+  "https://swapi.co/api/api/",
+  "https://swapi.co/api/auth",
+  "https://swapi.co/api/auth.json",
+  "https://swapi.co/api/auth.xml",
+  "https://swapi.co/api/auth/",
+  "https://swapi.co/api/beta",
+  "https://swapi.co/api/beta.json",
+  "https://swapi.co/api/beta.xml",
+  "https://swapi.co/api/beta/",
+  "https://swapi.co/api/dev",
+  "https://swapi.co/api/dev.json",
+  "https://swapi.co/api/dev.xml",
+  "https://swapi.co/api/dev/",
+  "https://swapi.co/api/graphql",
+  "https://swapi.co/api/graphql.json",
+  "https://swapi.co/api/graphql.xml",
+  "https://swapi.co/api/graphql/",
+  "https://swapi.co/api/internal",
+  "https://swapi.co/api/internal.json",
+  "https://swapi.co/api/internal.xml",
+  "https://swapi.co/api/internal/",
+  "https://swapi.co/api/login",
+  "https://swapi.co/api/login.json",
+  "https://swapi.co/api/login.xml",
+  "https://swapi.co/api/login/",
+  "https://swapi.co/api/oauth",
+  "https://swapi.co/api/oauth.json",
+  "https://swapi.co/api/oauth.xml",
+  "https://swapi.co/api/oauth/",
+  "https://swapi.co/api/prod",
+  "https://swapi.co/api/prod.json",
+  "https://swapi.co/api/prod.xml",
+  "https://swapi.co/api/prod/",
+  "https://swapi.co/api/rest",
+  "https://swapi.co/api/rest.json",
+  "https://swapi.co/api/rest.xml",
+  "https://swapi.co/api/rest/",
+  "https://swapi.co/api/soap",
+  "https://swapi.co/api/soap.json",
+  "https://swapi.co/api/soap.xml",
+  "https://swapi.co/api/soap/",
+  "https://swapi.co/api/stage",
+  "https://swapi.co/api/stage.json",
+  "https://swapi.co/api/stage.xml",
+  "https://swapi.co/api/stage/",
+  "https://swapi.co/api/test",
+  "https://swapi.co/api/test.json",
+  "https://swapi.co/api/test.xml",
+  "https://swapi.co/api/test/",
+  "https://swapi.co/api/user",
+  "https://swapi.co/api/user.json",
+  "https://swapi.co/api/user.xml",
+  "https://swapi.co/api/user/",
+  "https://swapi.co/api/v1",
+  "https://swapi.co/api/v1.json",
+  "https://swapi.co/api/v1.xml",
+  "https://swapi.co/api/v1/",
+  "https://swapi.co/api/v2",
+  "https://swapi.co/api/v2.json",
+  "https://swapi.co/api/v2.xml",
+  "https://swapi.co/api/v2/",
+  "https://swapi.co/api/v3",
+  "https://swapi.co/api/v3.json",
+  "https://swapi.co/api/v3.xml",
+  "https://swapi.co/api/v3/",
+  "https://swapi.co/auth",
+  "https://swapi.co/auth.json",
+  "https://swapi.co/auth.xml",
+  "https://swapi.co/auth/",
+  "https://swapi.co/beta",
+  "https://swapi.co/beta.json",
+  "https://swapi.co/beta.xml",
+  "https://swapi.co/beta/",
+  "https://swapi.co/dev",
+  "https://swapi.co/dev.json",
+  "https://swapi.co/dev.xml",
+  "https://swapi.co/dev/",
+  "https://swapi.co/graphql",
+  "https://swapi.co/graphql.json",
+  "https://swapi.co/graphql.xml",
+  "https://swapi.co/graphql/",
+  "https://swapi.co/internal",
+  "https://swapi.co/internal.json",
+  "https://swapi.co/internal.xml",
+  "https://swapi.co/internal/",
+  "https://swapi.co/login",
+  "https://swapi.co/login.json",
+  "https://swapi.co/login.xml",
+  "https://swapi.co/login/",
+  "https://swapi.co/oauth",
+  "https://swapi.co/oauth.json",
+  "https://swapi.co/oauth.xml",
+  "https://swapi.co/oauth/",
+  "https://swapi.co/prod",
+  "https://swapi.co/prod.json",
+  "https://swapi.co/prod.xml",
+  "https://swapi.co/prod/",
+  "https://swapi.co/rest",
+  "https://swapi.co/rest.json",
+  "https://swapi.co/rest.xml",
+  "https://swapi.co/rest/",
+  "https://swapi.co/soap",
+  "https://swapi.co/soap.json",
+  "https://swapi.co/soap.xml",
+  "https://swapi.co/soap/",
+  "https://swapi.co/stage",
+  "https://swapi.co/stage.json",
+  "https://swapi.co/stage.xml",
+  "https://swapi.co/stage/",
+  "https://swapi.co/test",
+  "https://swapi.co/test.json",
+  "https://swapi.co/test.xml",
+  "https://swapi.co/test/",
+  "https://swapi.co/user",
+  "https://swapi.co/user.json",
+  "https://swapi.co/user.xml",
+  "https://swapi.co/user/",
+  "https://swapi.co/v1",
+  "https://swapi.co/v1.json",
+  "https://swapi.co/v1.xml",
+  "https://swapi.co/v1/",
+  "https://swapi.co/v1/admin",
+  "https://swapi.co/v1/admin.json",
+  "https://swapi.co/v1/admin.xml",
+  "https://swapi.co/v1/admin/",
+  "https://swapi.co/v1/api",
+  "https://swapi.co/v1/api.json",
+  "https://swapi.co/v1/api.xml",
+  "https://swapi.co/v1/api/",
+  "https://swapi.co/v1/auth",
+  "https://swapi.co/v1/auth.json",
+  "https://swapi.co/v1/auth.xml",
+  "https://swapi.co/v1/auth/",
+  "https://swapi.co/v1/beta",
+  "https://swapi.co/v1/beta.json",
+  "https://swapi.co/v1/beta.xml",
+  "https://swapi.co/v1/beta/",
+  "https://swapi.co/v1/dev",
+  "https://swapi.co/v1/dev.json",
+  "https://swapi.co/v1/dev.xml",
+  "https://swapi.co/v1/dev/",
+  "https://swapi.co/v1/graphql",
+  "https://swapi.co/v1/graphql.json",
+  "https://swapi.co/v1/graphql.xml",
+  "https://swapi.co/v1/graphql/",
+  "https://swapi.co/v1/internal",
+  "https://swapi.co/v1/internal.json",
+  "https://swapi.co/v1/internal.xml",
+  "https://swapi.co/v1/internal/",
+  "https://swapi.co/v1/login",
+  "https://swapi.co/v1/login.json",
+  "https://swapi.co/v1/login.xml",
+  "https://swapi.co/v1/login/",
+  "https://swapi.co/v1/oauth",
+  "https://swapi.co/v1/oauth.json",
+  "https://swapi.co/v1/oauth.xml",
+  "https://swapi.co/v1/oauth/",
+  "https://swapi.co/v1/prod",
+  "https://swapi.co/v1/prod.json",
+  "https://swapi.co/v1/prod.xml",
+  "https://swapi.co/v1/prod/",
+  "https://swapi.co/v1/rest",
+  "https://swapi.co/v1/rest.json",
+  "https://swapi.co/v1/rest.xml",
+  "https://swapi.co/v1/rest/",
+  "https://swapi.co/v1/soap",
+  "https://swapi.co/v1/soap.json",
+  "https://swapi.co/v1/soap.xml",
+  "https://swapi.co/v1/soap/",
+  "https://swapi.co/v1/stage",
+  "https://swapi.co/v1/stage.json",
+  "https://swapi.co/v1/stage.xml",
+  "https://swapi.co/v1/stage/",
+  "https://swapi.co/v1/test",
+  "https://swapi.co/v1/test.json",
+  "https://swapi.co/v1/test.xml",
+  "https://swapi.co/v1/test/",
+  "https://swapi.co/v1/user",
+  "https://swapi.co/v1/user.json",
+  "https://swapi.co/v1/user.xml",
+  "https://swapi.co/v1/user/",
+  "https://swapi.co/v1/v1",
+  "https://swapi.co/v1/v1.json",
+  "https://swapi.co/v1/v1.xml",
+  "https://swapi.co/v1/v1/",
+  "https://swapi.co/v1/v2",
+  "https://swapi.co/v1/v2.json",
+  "https://swapi.co/v1/v2.xml",
+  "https://swapi.co/v1/v2/",
+  "https://swapi.co/v1/v3",
+  "https://swapi.co/v1/v3.json",
+  "https://swapi.co/v1/v3.xml",
+  "https://swapi.co/v1/v3/",
+  "https://swapi.co/v2",
+  "https://swapi.co/v2.json",
+  "https://swapi.co/v2.xml",
+  "https://swapi.co/v2/",
+  "https://swapi.co/v2/admin",
+  "https://swapi.co/v2/admin.json",
+  "https://swapi.co/v2/admin.xml",
+  "https://swapi.co/v2/admin/",
+  "https://swapi.co/v2/api",
+  "https://swapi.co/v2/api.json",
+  "https://swapi.co/v2/api.xml",
+  "https://swapi.co/v2/api/",
+  "https://swapi.co/v2/auth",
+  "https://swapi.co/v2/auth.json",
+  "https://swapi.co/v2/auth.xml",
+  "https://swapi.co/v2/auth/",
+  "https://swapi.co/v2/beta",
+  "https://swapi.co/v2/beta.json",
+  "https://swapi.co/v2/beta.xml",
+  "https://swapi.co/v2/beta/",
+  "https://swapi.co/v2/dev",
+  "https://swapi.co/v2/dev.json",
+  "https://swapi.co/v2/dev.xml",
+  "https://swapi.co/v2/dev/",
+  "https://swapi.co/v2/graphql",
+  "https://swapi.co/v2/graphql.json",
+  "https://swapi.co/v2/graphql.xml",
+  "https://swapi.co/v2/graphql/",
+  "https://swapi.co/v2/internal",
+  "https://swapi.co/v2/internal.json",
+  "https://swapi.co/v2/internal.xml",
+  "https://swapi.co/v2/internal/",
+  "https://swapi.co/v2/login",
+  "https://swapi.co/v2/login.json",
+  "https://swapi.co/v2/login.xml",
+  "https://swapi.co/v2/login/",
+  "https://swapi.co/v2/oauth",
+  "https://swapi.co/v2/oauth.json",
+  "https://swapi.co/v2/oauth.xml",
+  "https://swapi.co/v2/oauth/",
+  "https://swapi.co/v2/prod",
+  "https://swapi.co/v2/prod.json",
+  "https://swapi.co/v2/prod.xml",
+  "https://swapi.co/v2/prod/",
+  "https://swapi.co/v2/rest",
+  "https://swapi.co/v2/rest.json",
+  "https://swapi.co/v2/rest.xml",
+  "https://swapi.co/v2/rest/",
+  "https://swapi.co/v2/soap",
+  "https://swapi.co/v2/soap.json",
+  "https://swapi.co/v2/soap.xml",
+  "https://swapi.co/v2/soap/",
+  "https://swapi.co/v2/stage",
+  "https://swapi.co/v2/stage.json",
+  "https://swapi.co/v2/stage.xml",
+  "https://swapi.co/v2/stage/",
+  "https://swapi.co/v2/test",
+  "https://swapi.co/v2/test.json",
+  "https://swapi.co/v2/test.xml",
+  "https://swapi.co/v2/test/",
+  "https://swapi.co/v2/user",
+  "https://swapi.co/v2/user.json",
+  "https://swapi.co/v2/user.xml",
+  "https://swapi.co/v2/user/",
+  "https://swapi.co/v2/v1",
+  "https://swapi.co/v2/v1.json",
+  "https://swapi.co/v2/v1.xml",
+  "https://swapi.co/v2/v1/",
+  "https://swapi.co/v2/v2",
+  "https://swapi.co/v2/v2.json",
+  "https://swapi.co/v2/v2.xml",
+  "https://swapi.co/v2/v2/",
+  "https://swapi.co/v2/v3",
+  "https://swapi.co/v2/v3.json",
+  "https://swapi.co/v2/v3.xml",
+  "https://swapi.co/v2/v3/",
+  "https://swapi.co/v3",
+  "https://swapi.co/v3.json",
+  "https://swapi.co/v3.xml",
+  "https://swapi.co/v3/"
+]</pre>
+                </div>
+            </div>
+        </body>
+        </html>
+        
