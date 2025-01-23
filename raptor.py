@@ -38,7 +38,7 @@ def print_banner():
 │   {Fore.RED}╚═╝  ╚═╝ ╚═╝  ╚═╝ ╚═╝        ╚═╝    ╚════╝ ╚═╝  ╚═╝      {Fore.CYAN}│
 │{Style.RESET_ALL}                                                              {Fore.CYAN}│
 ├──────────────────────────────────────────────────────────────┤
-│{Fore.WHITE}      Rapid API Testing and Operation Reconnaissance v1.5     {Fore.CYAN}│
+│{Fore.WHITE}      Rapid API Testing and Operation Reconnaissance v1.5.5.5     {Fore.CYAN}│
 ├──────────────────────────────────────────────────────────────┤
 │{Fore.YELLOW}  [*] API Discovery  [*] Auth Detection  [*] Schema Analysis  {Fore.CYAN}│
 ╰──────────────────────────────────────────────────────────────╯{Style.RESET_ALL}
