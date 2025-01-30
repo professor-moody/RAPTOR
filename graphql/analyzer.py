@@ -4,8 +4,12 @@ import asyncio
 import json
 from typing import Dict, List, Any, Optional, Set
 import requests
+<<<<<<< HEAD
 from urllib.parse import urljoin, urlparse
 import time
+=======
+from urllib.parse import urljoin
+>>>>>>> 7e3c8bf9a36facf0d0f80cf45b2e0b541100c092
 
 from output.formatter import OutputFormatter
 from .schema import SchemaAnalyzer
@@ -32,12 +36,16 @@ class GraphQLAnalyzer:
             '/gql',
             '/api/gql',
             '/graphql/console',
+<<<<<<< HEAD
             '/.well-known/graphql',
+=======
+>>>>>>> 7e3c8bf9a36facf0d0f80cf45b2e0b541100c092
             '/graphql/v1',
             '/graphql/v2',
             '/api/v1/graphql',
             '/api/v2/graphql'
         ]
+<<<<<<< HEAD
 
     async def _discover_endpoints(self) -> Dict[str, Any]:
         """Discover GraphQL endpoints"""
@@ -59,6 +67,9 @@ class GraphQLAnalyzer:
                 ))
         return endpoints
 
+=======
+        
+>>>>>>> 7e3c8bf9a36facf0d0f80cf45b2e0b541100c092
     async def _check_endpoint(self, url: str) -> Dict[str, Any]:
         """Check if endpoint is GraphQL"""
         result = {
@@ -68,6 +79,7 @@ class GraphQLAnalyzer:
             'details': {}
         }
 
+<<<<<<< HEAD
         detection_methods = [
             self._check_simple_query,
             self._check_introspection,
@@ -98,11 +110,21 @@ class GraphQLAnalyzer:
             response = self.session.post(
                 url, 
                 json={'query': query},
+=======
+        try:
+            # Test basic query
+            test_query = '{ __typename }'
+            headers = {'Content-Type': 'application/json'}
+            response = self.session.post(
+                url, 
+                json={'query': test_query},
+>>>>>>> 7e3c8bf9a36facf0d0f80cf45b2e0b541100c092
                 headers=headers,
                 timeout=10
             )
 
             is_json = 'application/json' in response.headers.get('content-type', '')
+<<<<<<< HEAD
             if response.status_code == 200 and is_json:
                 data = response.json()
                 if 'data' in data and '__typename' in data['data']:
@@ -193,6 +215,37 @@ class GraphQLAnalyzer:
               args { name type { name kind } }
             }
           }
+=======
+            
+            if response.status_code == 200 and is_json:
+                data = response.json()
+                if 'data' in data or 'errors' in data:
+                    result['is_graphql'] = True
+                    result['details']['status_code'] = response.status_code
+                    
+                    # Check introspection
+                    schema = await self._fetch_schema(url)
+                    if schema:
+                        result['supports_introspection'] = True
+                        result['schema_available'] = True
+                        result['details']['schema_size'] = len(str(schema))
+
+        except Exception as e:
+            result['details']['error'] = str(e)
+
+        return result
+
+    async def _fetch_schema(self, url: str) -> Optional[Dict]:
+        """Fetch GraphQL schema via introspection"""
+        introspection_query = """
+        query IntrospectionQuery {
+            __schema {
+                types { name kind description fields { name type { name kind } } }
+                queryType { name }
+                mutationType { name }
+                subscriptionType { name }
+            }
+>>>>>>> 7e3c8bf9a36facf0d0f80cf45b2e0b541100c092
         }
         """
 
@@ -206,7 +259,11 @@ class GraphQLAnalyzer:
             
             if response.status_code == 200:
                 data = response.json()
+<<<<<<< HEAD
                 if 'data' in data and '__schema' in data['data']:
+=======
+                if 'data' in data:
+>>>>>>> 7e3c8bf9a36facf0d0f80cf45b2e0b541100c092
                     return data['data']['__schema']
                     
         except Exception as e:
@@ -214,6 +271,7 @@ class GraphQLAnalyzer:
             
         return None
 
+<<<<<<< HEAD
     def _extract_vulnerabilities(self, url: str, schema_analysis: Dict) -> List[Dict]:
         """Extract and format vulnerabilities from schema analysis"""
         vulnerabilities = []
@@ -363,3 +421,115 @@ class GraphQLAnalyzer:
                 'schema_analysis': {},
                 'test_results': {}
             }
+=======
+    async def _discover_endpoints(self) -> Dict[str, Any]:
+        """Discover GraphQL endpoints"""
+        endpoints = {}
+
+        print(self.formatter.info("\nDiscovering GraphQL endpoints..."))
+        
+        for path in self.common_paths:
+            url = urljoin(self.base_url, path)
+            result = await self._check_endpoint(url)
+            
+            if result['is_graphql']:
+                endpoints[url] = result
+                self.discovered_endpoints.add(url)
+                
+                status = []
+                if result['supports_introspection']:
+                    status.append("Introspection: ✓")
+                if result['schema_available']:
+                    status.append("Schema: ✓")
+                    
+                print(self.formatter.success(
+                    f"Found GraphQL endpoint: {url} ({', '.join(status)})"
+                ))
+
+        return endpoints
+
+    def analyze(self) -> Dict[str, Any]:
+        """Analyze discovered GraphQL endpoints"""
+        results = {
+            'endpoints': {},
+            'vulnerabilities': [],
+            'schema_analysis': {},
+            'test_results': {}
+        }
+
+        try:
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            
+            try:
+                results = loop.run_until_complete(self._analyze())
+            finally:
+                loop.close()
+
+        except Exception as e:
+            print(self.formatter.error(f"Error during GraphQL analysis: {str(e)}"))
+            results['error'] = str(e)
+
+        return results
+
+    async def _analyze(self) -> Dict[str, Any]:
+        """Run full GraphQL analysis"""
+        results = {
+            'endpoints': {},
+            'vulnerabilities': [],
+            'schema_analysis': {},
+            'test_results': {}
+        }
+
+        # Discover endpoints
+        endpoints = await self._discover_endpoints()
+        results['endpoints'] = endpoints
+
+        for url, info in endpoints.items():
+            if info['is_graphql']:
+                print(self.formatter.info(f"\nAnalyzing endpoint: {url}"))
+                
+                # Get schema
+                if info['schema_available']:
+                    schema = await self._fetch_schema(url)
+                    if schema:
+                        # Analyze schema
+                        schema_analysis = await self.schema_analyzer.analyze(schema)
+                        results['schema_analysis'][url] = schema_analysis
+                        
+                        # Extract vulnerabilities
+                        for issue in schema_analysis.get('security_concerns', []):
+                            results['vulnerabilities'].append({
+                                'url': url,
+                                'type': issue['type'],
+                                'severity': issue['severity'],
+                                'location': issue['location'],
+                                'description': issue['description']
+                            })
+                
+                # Run security tests
+                print(self.formatter.info("Running security tests..."))
+                test_results = await self.tester.run_tests(url)
+                results['test_results'][url] = test_results
+                
+                # Add test vulnerabilities
+                for test_name, test_result in test_results.items():
+                    if isinstance(test_result, dict) and test_result.get('vulnerable'):
+                        results['vulnerabilities'].append({
+                            'url': url,
+                            'type': f'graphql_{test_name}',
+                            'severity': test_result['severity'],
+                            'details': test_result.get('details', {})
+                        })
+
+        # Print summary
+        total_vulns = len(results['vulnerabilities'])
+        if total_vulns:
+            print(self.formatter.info(f"\nFound {total_vulns} potential vulnerabilities:"))
+            for vuln in results['vulnerabilities']:
+                print(self.formatter.warning(
+                    f"[{vuln['severity']}] {vuln['type']} in {vuln['url']}"
+                ))
+
+        return results
+>>>>>>> 7e3c8bf9a36facf0d0f80cf45b2e0b541100c092

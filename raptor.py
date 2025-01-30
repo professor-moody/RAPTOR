@@ -38,7 +38,7 @@ def print_banner():
 │   {Fore.RED}╚═╝  ╚═╝ ╚═╝  ╚═╝ ╚═╝        ╚═╝    ╚════╝ ╚═╝  ╚═╝      {Fore.CYAN}│
 │{Style.RESET_ALL}                                                              {Fore.CYAN}│
 ├──────────────────────────────────────────────────────────────┤
-│{Fore.WHITE}      Rapid API Testing and Operation Reconnaissance v1.5     {Fore.CYAN}│
+│{Fore.WHITE}      Rapid API Testing and Operation Reconnaissance v1.5.5.5     {Fore.CYAN}│
 ├──────────────────────────────────────────────────────────────┤
 │{Fore.YELLOW}  [*] API Discovery  [*] Auth Detection  [*] Schema Analysis  {Fore.CYAN}│
 ╰──────────────────────────────────────────────────────────────╯{Style.RESET_ALL}
@@ -124,6 +124,7 @@ class RAPTOR:
                 'base_url': self.base_url,
                 'scan_time': datetime.now().isoformat(),
                 'options': self.options
+<<<<<<< HEAD
             }
         }
         
@@ -132,6 +133,28 @@ class RAPTOR:
                 threads=self.options.get('threads', 10)
         )
         
+=======
+                }
+            }
+        
+            # Phase 1: Endpoint Discovery
+            logger.info("Starting endpoint discovery phase")
+            print(self.formatter.info("\nStarting endpoint discovery..."))
+        
+            self.discovered_endpoints = self.discovery_fuzzer.discover(
+                threads=self.options.get('threads', 10)
+            )
+        
+            # Add GraphQL Phase
+            graphql_analyzer = GraphQLAnalyzer(self.session, self.base_url, self.formatter)
+            graphql_results = graphql_analyzer.analyze()
+            if graphql_results.get('endpoints'):
+                results['graphql'] = graphql_results
+                self.discovered_endpoints.update(graphql_results['endpoints'].keys())
+        
+        # Continue with other phases...
+            
+>>>>>>> 7e3c8bf9a36facf0d0f80cf45b2e0b541100c092
             results['discovery'] = {
                 'endpoints_found': len(self.discovered_endpoints),
                 'endpoints': sorted(list(self.discovered_endpoints))
@@ -184,6 +207,8 @@ class RAPTOR:
             logger.error(f"Error during scan: {str(e)}")
             raise
 
+# In raptor.py, update the argument parser section:
+
 def main():
     parser = argparse.ArgumentParser(
         description='RAPTOR - Rapid API Testing and Operation Reconnaissance',
@@ -200,16 +225,30 @@ def main():
     parser.add_argument('--format', choices=['json', 'html', 'both'], default='both',
                       help='Report format (default: both)')
     parser.add_argument('-t', '--threads', type=int, default=10,
-                        help='Number of threads for concurrent operations (default: 10)')
+                       help='Number of threads for bruteforcing')
     parser.add_argument('--timeout', type=int, default=30,
-                        help='Timeout for requests in seconds (default: 30)')
-    
-    # Logging and output options
+                       help='Timeout for requests in seconds')
     parser.add_argument('-v', '--verbose', action='store_true',
-                        help='Enable verbose output')
+                       help='Enable verbose output')
     parser.add_argument('-q', '--quiet', action='store_true',
-                        help='Minimize output, only show important messages')
-    
+                       help='Minimize output, only show important messages')
+    parser.add_argument('--debug', action='store_true',
+                       help='Enable debug logging')
+    parser.add_argument('--risk-level', choices=['low', 'medium', 'high'],
+                       default='medium', help='Set testing risk level')
+    parser.add_argument('--checks', nargs='+', 
+                       choices=['sql', 'cmd', 'xxe', 'ssrf', 'auth', 'path', 'all'],
+                       default=['all'], help='Specific vulnerability checks to run')
+    parser.add_argument('--dangerous-methods', nargs='+',
+                       default=['PUT', 'DELETE', 'TRACE'],
+                       help='HTTP methods considered dangerous')
+    parser.add_argument('--max-retries', type=int, default=3,
+                       help='Maximum number of retries per request')
+    parser.add_argument('--no-verify', action='store_true',
+                       help='Disable SSL verification')
+    parser.add_argument('--auth-header',
+                       help='Authorization header to include in requests')
+
     args = parser.parse_args()
 
     # Configure logging

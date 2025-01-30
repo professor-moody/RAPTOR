@@ -11,6 +11,20 @@ from output.formatter import OutputFormatter
 logger = logging.getLogger(__name__)
 
 class VulnerabilityCheckConfig:
+    def __init__(self, **kwargs):
+        checks = kwargs.get('checks', {})
+        self.check_sql_injection = checks.get('sql', True)
+        self.check_command_injection = checks.get('cmd', True)
+        self.check_path_traversal = checks.get('path', True)
+        self.check_xxe = checks.get('xxe', True)
+        self.check_ssrf = checks.get('ssrf', True)
+        self.check_auth_bypass = checks.get('auth', True)
+        
+        self.dangerous_methods = kwargs.get('dangerous_methods', ['PUT', 'DELETE', 'TRACE'])
+        self.risk_level = kwargs.get('risk_level', 'medium')
+        self.request_timeout = kwargs.get('timeout', 10)
+        self.max_retries = kwargs.get('max_retries', 3)
+        
     """Configuration for vulnerability checks"""
     def __init__(self, **kwargs):
         # HTTP Method Checks

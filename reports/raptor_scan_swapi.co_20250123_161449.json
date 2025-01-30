@@ -1,0 +1,2981 @@
+{
+  "scan_info": {
+    "base_url": "https://swapi.co",
+    "scan_time": "2025-01-23T16:14:49.789563",
+    "options": {
+      "threads": 10,
+      "timeout": 30,
+      "verbose": false,
+      "quiet": false
+    }
+  },
+  "discovery": {
+    "endpoints_found": 287,
+    "endpoints": [
+      "https://swapi.co/admin",
+      "https://swapi.co/admin.json",
+      "https://swapi.co/admin.xml",
+      "https://swapi.co/admin/",
+      "https://swapi.co/api",
+      "https://swapi.co/api.json",
+      "https://swapi.co/api.xml",
+      "https://swapi.co/api/",
+      "https://swapi.co/api/admin",
+      "https://swapi.co/api/admin.json",
+      "https://swapi.co/api/admin.xml",
+      "https://swapi.co/api/api",
+      "https://swapi.co/api/api.json",
+      "https://swapi.co/api/api.xml",
+      "https://swapi.co/api/api/",
+      "https://swapi.co/api/auth",
+      "https://swapi.co/api/auth.json",
+      "https://swapi.co/api/auth.xml",
+      "https://swapi.co/api/auth/",
+      "https://swapi.co/api/beta",
+      "https://swapi.co/api/beta.json",
+      "https://swapi.co/api/beta.xml",
+      "https://swapi.co/api/beta/",
+      "https://swapi.co/api/dev",
+      "https://swapi.co/api/dev.json",
+      "https://swapi.co/api/dev.xml",
+      "https://swapi.co/api/dev/",
+      "https://swapi.co/api/graphql",
+      "https://swapi.co/api/graphql.json",
+      "https://swapi.co/api/graphql.xml",
+      "https://swapi.co/api/graphql/",
+      "https://swapi.co/api/internal",
+      "https://swapi.co/api/internal.json",
+      "https://swapi.co/api/internal.xml",
+      "https://swapi.co/api/internal/",
+      "https://swapi.co/api/login",
+      "https://swapi.co/api/login.json",
+      "https://swapi.co/api/login.xml",
+      "https://swapi.co/api/login/",
+      "https://swapi.co/api/oauth",
+      "https://swapi.co/api/oauth.json",
+      "https://swapi.co/api/oauth.xml",
+      "https://swapi.co/api/oauth/",
+      "https://swapi.co/api/prod",
+      "https://swapi.co/api/prod.json",
+      "https://swapi.co/api/prod.xml",
+      "https://swapi.co/api/prod/",
+      "https://swapi.co/api/rest",
+      "https://swapi.co/api/rest.json",
+      "https://swapi.co/api/rest.xml",
+      "https://swapi.co/api/rest/",
+      "https://swapi.co/api/soap",
+      "https://swapi.co/api/soap.json",
+      "https://swapi.co/api/soap.xml",
+      "https://swapi.co/api/soap/",
+      "https://swapi.co/api/stage",
+      "https://swapi.co/api/stage.json",
+      "https://swapi.co/api/stage.xml",
+      "https://swapi.co/api/stage/",
+      "https://swapi.co/api/test",
+      "https://swapi.co/api/test.json",
+      "https://swapi.co/api/test.xml",
+      "https://swapi.co/api/test/",
+      "https://swapi.co/api/user",
+      "https://swapi.co/api/user.json",
+      "https://swapi.co/api/user.xml",
+      "https://swapi.co/api/user/",
+      "https://swapi.co/api/v1",
+      "https://swapi.co/api/v1.json",
+      "https://swapi.co/api/v1.xml",
+      "https://swapi.co/api/v1/",
+      "https://swapi.co/api/v2",
+      "https://swapi.co/api/v2.json",
+      "https://swapi.co/api/v2.xml",
+      "https://swapi.co/api/v2/",
+      "https://swapi.co/api/v3",
+      "https://swapi.co/api/v3.json",
+      "https://swapi.co/api/v3.xml",
+      "https://swapi.co/api/v3/",
+      "https://swapi.co/auth",
+      "https://swapi.co/auth.json",
+      "https://swapi.co/auth.xml",
+      "https://swapi.co/auth/",
+      "https://swapi.co/beta",
+      "https://swapi.co/beta.json",
+      "https://swapi.co/beta.xml",
+      "https://swapi.co/beta/",
+      "https://swapi.co/dev",
+      "https://swapi.co/dev.json",
+      "https://swapi.co/dev.xml",
+      "https://swapi.co/dev/",
+      "https://swapi.co/graphql",
+      "https://swapi.co/graphql.json",
+      "https://swapi.co/graphql.xml",
+      "https://swapi.co/graphql/",
+      "https://swapi.co/internal",
+      "https://swapi.co/internal.json",
+      "https://swapi.co/internal.xml",
+      "https://swapi.co/internal/",
+      "https://swapi.co/login",
+      "https://swapi.co/login.json",
+      "https://swapi.co/login.xml",
+      "https://swapi.co/login/",
+      "https://swapi.co/oauth",
+      "https://swapi.co/oauth.json",
+      "https://swapi.co/oauth.xml",
+      "https://swapi.co/oauth/",
+      "https://swapi.co/prod",
+      "https://swapi.co/prod.json",
+      "https://swapi.co/prod.xml",
+      "https://swapi.co/prod/",
+      "https://swapi.co/rest",
+      "https://swapi.co/rest.json",
+      "https://swapi.co/rest.xml",
+      "https://swapi.co/rest/",
+      "https://swapi.co/soap",
+      "https://swapi.co/soap.json",
+      "https://swapi.co/soap.xml",
+      "https://swapi.co/soap/",
+      "https://swapi.co/stage",
+      "https://swapi.co/stage.json",
+      "https://swapi.co/stage.xml",
+      "https://swapi.co/stage/",
+      "https://swapi.co/test",
+      "https://swapi.co/test.json",
+      "https://swapi.co/test.xml",
+      "https://swapi.co/test/",
+      "https://swapi.co/user",
+      "https://swapi.co/user.json",
+      "https://swapi.co/user.xml",
+      "https://swapi.co/user/",
+      "https://swapi.co/v1",
+      "https://swapi.co/v1.json",
+      "https://swapi.co/v1.xml",
+      "https://swapi.co/v1/",
+      "https://swapi.co/v1/admin",
+      "https://swapi.co/v1/admin.json",
+      "https://swapi.co/v1/admin.xml",
+      "https://swapi.co/v1/admin/",
+      "https://swapi.co/v1/api",
+      "https://swapi.co/v1/api.json",
+      "https://swapi.co/v1/api.xml",
+      "https://swapi.co/v1/api/",
+      "https://swapi.co/v1/auth",
+      "https://swapi.co/v1/auth.json",
+      "https://swapi.co/v1/auth.xml",
+      "https://swapi.co/v1/auth/",
+      "https://swapi.co/v1/beta",
+      "https://swapi.co/v1/beta.json",
+      "https://swapi.co/v1/beta.xml",
+      "https://swapi.co/v1/beta/",
+      "https://swapi.co/v1/dev",
+      "https://swapi.co/v1/dev.json",
+      "https://swapi.co/v1/dev.xml",
+      "https://swapi.co/v1/dev/",
+      "https://swapi.co/v1/graphql",
+      "https://swapi.co/v1/graphql.json",
+      "https://swapi.co/v1/graphql.xml",
+      "https://swapi.co/v1/graphql/",
+      "https://swapi.co/v1/internal",
+      "https://swapi.co/v1/internal.json",
+      "https://swapi.co/v1/internal.xml",
+      "https://swapi.co/v1/internal/",
+      "https://swapi.co/v1/login",
+      "https://swapi.co/v1/login.json",
+      "https://swapi.co/v1/login.xml",
+      "https://swapi.co/v1/login/",
+      "https://swapi.co/v1/oauth",
+      "https://swapi.co/v1/oauth.json",
+      "https://swapi.co/v1/oauth.xml",
+      "https://swapi.co/v1/oauth/",
+      "https://swapi.co/v1/prod",
+      "https://swapi.co/v1/prod.json",
+      "https://swapi.co/v1/prod.xml",
+      "https://swapi.co/v1/prod/",
+      "https://swapi.co/v1/rest",
+      "https://swapi.co/v1/rest.json",
+      "https://swapi.co/v1/rest.xml",
+      "https://swapi.co/v1/rest/",
+      "https://swapi.co/v1/soap",
+      "https://swapi.co/v1/soap.json",
+      "https://swapi.co/v1/soap.xml",
+      "https://swapi.co/v1/soap/",
+      "https://swapi.co/v1/stage",
+      "https://swapi.co/v1/stage.json",
+      "https://swapi.co/v1/stage.xml",
+      "https://swapi.co/v1/stage/",
+      "https://swapi.co/v1/test",
+      "https://swapi.co/v1/test.json",
+      "https://swapi.co/v1/test.xml",
+      "https://swapi.co/v1/test/",
+      "https://swapi.co/v1/user",
+      "https://swapi.co/v1/user.json",
+      "https://swapi.co/v1/user.xml",
+      "https://swapi.co/v1/user/",
+      "https://swapi.co/v1/v1",
+      "https://swapi.co/v1/v1.json",
+      "https://swapi.co/v1/v1.xml",
+      "https://swapi.co/v1/v1/",
+      "https://swapi.co/v1/v2",
+      "https://swapi.co/v1/v2.json",
+      "https://swapi.co/v1/v2.xml",
+      "https://swapi.co/v1/v2/",
+      "https://swapi.co/v1/v3",
+      "https://swapi.co/v1/v3.json",
+      "https://swapi.co/v1/v3.xml",
+      "https://swapi.co/v1/v3/",
+      "https://swapi.co/v2",
+      "https://swapi.co/v2.json",
+      "https://swapi.co/v2.xml",
+      "https://swapi.co/v2/",
+      "https://swapi.co/v2/admin",
+      "https://swapi.co/v2/admin.json",
+      "https://swapi.co/v2/admin.xml",
+      "https://swapi.co/v2/admin/",
+      "https://swapi.co/v2/api",
+      "https://swapi.co/v2/api.json",
+      "https://swapi.co/v2/api.xml",
+      "https://swapi.co/v2/api/",
+      "https://swapi.co/v2/auth",
+      "https://swapi.co/v2/auth.json",
+      "https://swapi.co/v2/auth.xml",
+      "https://swapi.co/v2/auth/",
+      "https://swapi.co/v2/beta",
+      "https://swapi.co/v2/beta.json",
+      "https://swapi.co/v2/beta.xml",
+      "https://swapi.co/v2/beta/",
+      "https://swapi.co/v2/dev",
+      "https://swapi.co/v2/dev.json",
+      "https://swapi.co/v2/dev.xml",
+      "https://swapi.co/v2/dev/",
+      "https://swapi.co/v2/graphql",
+      "https://swapi.co/v2/graphql.json",
+      "https://swapi.co/v2/graphql.xml",
+      "https://swapi.co/v2/graphql/",
+      "https://swapi.co/v2/internal",
+      "https://swapi.co/v2/internal.json",
+      "https://swapi.co/v2/internal.xml",
+      "https://swapi.co/v2/internal/",
+      "https://swapi.co/v2/login",
+      "https://swapi.co/v2/login.json",
+      "https://swapi.co/v2/login.xml",
+      "https://swapi.co/v2/login/",
+      "https://swapi.co/v2/oauth",
+      "https://swapi.co/v2/oauth.json",
+      "https://swapi.co/v2/oauth.xml",
+      "https://swapi.co/v2/oauth/",
+      "https://swapi.co/v2/prod",
+      "https://swapi.co/v2/prod.json",
+      "https://swapi.co/v2/prod.xml",
+      "https://swapi.co/v2/prod/",
+      "https://swapi.co/v2/rest",
+      "https://swapi.co/v2/rest.json",
+      "https://swapi.co/v2/rest.xml",
+      "https://swapi.co/v2/rest/",
+      "https://swapi.co/v2/soap",
+      "https://swapi.co/v2/soap.json",
+      "https://swapi.co/v2/soap.xml",
+      "https://swapi.co/v2/soap/",
+      "https://swapi.co/v2/stage",
+      "https://swapi.co/v2/stage.json",
+      "https://swapi.co/v2/stage.xml",
+      "https://swapi.co/v2/stage/",
+      "https://swapi.co/v2/test",
+      "https://swapi.co/v2/test.json",
+      "https://swapi.co/v2/test.xml",
+      "https://swapi.co/v2/test/",
+      "https://swapi.co/v2/user",
+      "https://swapi.co/v2/user.json",
+      "https://swapi.co/v2/user.xml",
+      "https://swapi.co/v2/user/",
+      "https://swapi.co/v2/v1",
+      "https://swapi.co/v2/v1.json",
+      "https://swapi.co/v2/v1.xml",
+      "https://swapi.co/v2/v1/",
+      "https://swapi.co/v2/v2",
+      "https://swapi.co/v2/v2.json",
+      "https://swapi.co/v2/v2.xml",
+      "https://swapi.co/v2/v2/",
+      "https://swapi.co/v2/v3",
+      "https://swapi.co/v2/v3.json",
+      "https://swapi.co/v2/v3.xml",
+      "https://swapi.co/v2/v3/",
+      "https://swapi.co/v3",
+      "https://swapi.co/v3.json",
+      "https://swapi.co/v3.xml",
+      "https://swapi.co/v3/"
+    ]
+  },
+  "authentication": {
+    "auth_methods": [
+      "AWS"
+    ],
+    "endpoints_checked": 27,
+    "auth_findings": [
+      {
+        "method": "AWS",
+        "endpoints": [
+          "admin.json",
+          "api",
+          "api/admin.json",
+          "api/api.xml",
+          "api/auth",
+          "api/beta.json",
+          "api/dev.json",
+          "api/graphql.xml",
+          "api/internal",
+          "api/login.xml",
+          "api/oauth.json",
+          "api/prod.json",
+          "api/rest.json",
+          "api/soap.xml",
+          "api/stage",
+          "api/test.json",
+          "api/user.xml",
+          "auth.xml",
+          "graphql",
+          "internal",
+          "login.xml",
+          "prod",
+          "soap.xml",
+          "v1/oauth",
+          "v1/rest.json",
+          "v1/user",
+          "v2/beta",
+          "v2/dev.xml",
+          "v2/stage",
+          "v2/test.xml",
+          "v2/v3.json"
+        ],
+        "total_endpoints": 31
+      }
+    ],
+    "summary": {
+      "total_auth_methods": 1,
+      "total_endpoints_with_auth": 32,
+      "primary_auth_provider": "AWS"
+    }
+  },
+  "fuzzing": {
+    "endpoint_results": {
+      "https://swapi.co/v2/stage": {
+        "url": "https://swapi.co/v2/stage",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1.xml": {
+        "url": "https://swapi.co/v1.xml",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/user/": {
+        "url": "https://swapi.co/v1/user/",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/v1/": {
+        "url": "https://swapi.co/v2/v1/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/v3.json": {
+        "url": "https://swapi.co/v2/v3.json",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/oauth.json": {
+        "url": "https://swapi.co/api/oauth.json",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/rest.json": {
+        "url": "https://swapi.co/v1/rest.json",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/graphql/": {
+        "url": "https://swapi.co/graphql/",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/dev.json": {
+        "url": "https://swapi.co/api/dev.json",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/rest/": {
+        "url": "https://swapi.co/v2/rest/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/v1.xml": {
+        "url": "https://swapi.co/v1/v1.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/stage.xml": {
+        "url": "https://swapi.co/v1/stage.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v3.json": {
+        "url": "https://swapi.co/v3.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/soap.xml": {
+        "url": "https://swapi.co/soap.xml",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/beta": {
+        "url": "https://swapi.co/v2/beta",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/beta/": {
+        "url": "https://swapi.co/beta/",
+        "methods_allowed": [
+          "PUT",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/stage": {
+        "url": "https://swapi.co/api/stage",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/stage.json": {
+        "url": "https://swapi.co/api/stage.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/soap.xml": {
+        "url": "https://swapi.co/api/soap.xml",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/oauth.xml": {
+        "url": "https://swapi.co/v1/oauth.xml",
+        "methods_allowed": [
+          "PUT",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/oauth.xml": {
+        "url": "https://swapi.co/oauth.xml",
+        "methods_allowed": [
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/v3/": {
+        "url": "https://swapi.co/v2/v3/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2.xml": {
+        "url": "https://swapi.co/v2.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/oauth": {
+        "url": "https://swapi.co/v1/oauth",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/v1": {
+        "url": "https://swapi.co/v2/v1",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/oauth": {
+        "url": "https://swapi.co/api/oauth",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/test.json": {
+        "url": "https://swapi.co/api/test.json",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/v2": {
+        "url": "https://swapi.co/v1/v2",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/auth.xml": {
+        "url": "https://swapi.co/auth.xml",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/beta.xml": {
+        "url": "https://swapi.co/beta.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/auth": {
+        "url": "https://swapi.co/auth",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/auth.xml": {
+        "url": "https://swapi.co/v2/auth.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/prod/": {
+        "url": "https://swapi.co/prod/",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/soap/": {
+        "url": "https://swapi.co/soap/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/prod": {
+        "url": "https://swapi.co/v2/prod",
+        "methods_allowed": [
+          "POST",
+          "PUT",
+          "DELETE",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/prod": {
+        "url": "https://swapi.co/v1/prod",
+        "methods_allowed": [
+          "PUT",
+          "DELETE",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/rest": {
+        "url": "https://swapi.co/rest",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/dev.xml": {
+        "url": "https://swapi.co/api/dev.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/rest/": {
+        "url": "https://swapi.co/rest/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/v3/": {
+        "url": "https://swapi.co/v1/v3/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/stage": {
+        "url": "https://swapi.co/stage",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/user.xml": {
+        "url": "https://swapi.co/api/user.xml",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/beta": {
+        "url": "https://swapi.co/v1/beta",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/dev.xml": {
+        "url": "https://swapi.co/v1/dev.xml",
+        "methods_allowed": [
+          "POST",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/dev.xml": {
+        "url": "https://swapi.co/v2/dev.xml",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/oauth/": {
+        "url": "https://swapi.co/api/oauth/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v3.xml": {
+        "url": "https://swapi.co/v3.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/graphql": {
+        "url": "https://swapi.co/v2/graphql",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/stage.json": {
+        "url": "https://swapi.co/stage.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/soap/": {
+        "url": "https://swapi.co/v1/soap/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/beta.json": {
+        "url": "https://swapi.co/v1/beta.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/dev": {
+        "url": "https://swapi.co/v2/dev",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/oauth": {
+        "url": "https://swapi.co/v2/oauth",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/admin": {
+        "url": "https://swapi.co/v2/admin",
+        "methods_allowed": [
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1.json": {
+        "url": "https://swapi.co/v1.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/user/": {
+        "url": "https://swapi.co/user/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/test": {
+        "url": "https://swapi.co/test",
+        "methods_allowed": [
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/admin.xml": {
+        "url": "https://swapi.co/v2/admin.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/auth/": {
+        "url": "https://swapi.co/v2/auth/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/dev.xml": {
+        "url": "https://swapi.co/dev.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/prod.json": {
+        "url": "https://swapi.co/v1/prod.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/oauth/": {
+        "url": "https://swapi.co/oauth/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/v2.json": {
+        "url": "https://swapi.co/v2/v2.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/graphql.xml": {
+        "url": "https://swapi.co/v2/graphql.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/admin": {
+        "url": "https://swapi.co/admin",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/graphql": {
+        "url": "https://swapi.co/graphql",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/admin.xml": {
+        "url": "https://swapi.co/v1/admin.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/beta/": {
+        "url": "https://swapi.co/v1/beta/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/admin.json": {
+        "url": "https://swapi.co/api/admin.json",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/test.xml": {
+        "url": "https://swapi.co/v2/test.xml",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/test.json": {
+        "url": "https://swapi.co/v1/test.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/user": {
+        "url": "https://swapi.co/user",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/admin.json": {
+        "url": "https://swapi.co/admin.json",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/rest.json": {
+        "url": "https://swapi.co/api/rest.json",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/v2.json": {
+        "url": "https://swapi.co/api/v2.json",
+        "methods_allowed": [
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/api.xml": {
+        "url": "https://swapi.co/v1/api.xml",
+        "methods_allowed": [
+          "POST",
+          "PATCH"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/graphql.json": {
+        "url": "https://swapi.co/v1/graphql.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/test/": {
+        "url": "https://swapi.co/test/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/prod/": {
+        "url": "https://swapi.co/v2/prod/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/beta.json": {
+        "url": "https://swapi.co/v2/beta.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/soap/": {
+        "url": "https://swapi.co/v2/soap/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/v2.json": {
+        "url": "https://swapi.co/v1/v2.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/user.xml": {
+        "url": "https://swapi.co/user.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/v1.json": {
+        "url": "https://swapi.co/v1/v1.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api": {
+        "url": "https://swapi.co/api",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/v1.xml": {
+        "url": "https://swapi.co/api/v1.xml",
+        "methods_allowed": [
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/v3/": {
+        "url": "https://swapi.co/api/v3/",
+        "methods_allowed": [
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/prod.xml": {
+        "url": "https://swapi.co/v2/prod.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/beta.json": {
+        "url": "https://swapi.co/api/beta.json",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/rest": {
+        "url": "https://swapi.co/v1/rest",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1": {
+        "url": "https://swapi.co/v1",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/auth.json": {
+        "url": "https://swapi.co/auth.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/internal.xml": {
+        "url": "https://swapi.co/api/internal.xml",
+        "methods_allowed": [
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/graphql.xml": {
+        "url": "https://swapi.co/graphql.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/prod.json": {
+        "url": "https://swapi.co/api/prod.json",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/v1": {
+        "url": "https://swapi.co/api/v1",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/oauth/": {
+        "url": "https://swapi.co/v1/oauth/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/graphql/": {
+        "url": "https://swapi.co/v2/graphql/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/api/": {
+        "url": "https://swapi.co/v1/api/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/soap.json": {
+        "url": "https://swapi.co/v2/soap.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/internal.json": {
+        "url": "https://swapi.co/api/internal.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/oauth/": {
+        "url": "https://swapi.co/v2/oauth/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/internal/": {
+        "url": "https://swapi.co/api/internal/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/v1.xml": {
+        "url": "https://swapi.co/v2/v1.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/user.xml": {
+        "url": "https://swapi.co/v1/user.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/beta.xml": {
+        "url": "https://swapi.co/v1/beta.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/oauth.json": {
+        "url": "https://swapi.co/oauth.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/soap.json": {
+        "url": "https://swapi.co/soap.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/stage.xml": {
+        "url": "https://swapi.co/v2/stage.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/admin.xml": {
+        "url": "https://swapi.co/admin.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/stage/": {
+        "url": "https://swapi.co/v2/stage/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/admin/": {
+        "url": "https://swapi.co/v2/admin/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/rest": {
+        "url": "https://swapi.co/api/rest",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/oauth.json": {
+        "url": "https://swapi.co/v1/oauth.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/rest.xml": {
+        "url": "https://swapi.co/v2/rest.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/rest/": {
+        "url": "https://swapi.co/api/rest/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/stage.xml": {
+        "url": "https://swapi.co/stage.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/prod.xml": {
+        "url": "https://swapi.co/api/prod.xml",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "DELETE",
+          "PATCH"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/v3": {
+        "url": "https://swapi.co/api/v3",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/test/": {
+        "url": "https://swapi.co/v2/test/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/user.json": {
+        "url": "https://swapi.co/user.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/internal": {
+        "url": "https://swapi.co/api/internal",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/auth": {
+        "url": "https://swapi.co/v2/auth",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2": {
+        "url": "https://swapi.co/v2",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/internal.xml": {
+        "url": "https://swapi.co/internal.xml",
+        "methods_allowed": [
+          "GET",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/v3": {
+        "url": "https://swapi.co/v2/v3",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/user.xml": {
+        "url": "https://swapi.co/v2/user.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/stage.xml": {
+        "url": "https://swapi.co/api/stage.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/internal.json": {
+        "url": "https://swapi.co/internal.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/rest.xml": {
+        "url": "https://swapi.co/v1/rest.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/soap": {
+        "url": "https://swapi.co/soap",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/internal/": {
+        "url": "https://swapi.co/internal/",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/v2.xml": {
+        "url": "https://swapi.co/api/v2.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/graphql.xml": {
+        "url": "https://swapi.co/v1/graphql.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/graphql.json": {
+        "url": "https://swapi.co/v2/graphql.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/v3.json": {
+        "url": "https://swapi.co/v1/v3.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/internal": {
+        "url": "https://swapi.co/internal",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/dev/": {
+        "url": "https://swapi.co/dev/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/auth/": {
+        "url": "https://swapi.co/api/auth/",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/": {
+        "url": "https://swapi.co/v1/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/rest.json": {
+        "url": "https://swapi.co/rest.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/admin": {
+        "url": "https://swapi.co/api/admin",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/soap.xml": {
+        "url": "https://swapi.co/v1/soap.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/oauth.json": {
+        "url": "https://swapi.co/v2/oauth.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/auth": {
+        "url": "https://swapi.co/api/auth",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/prod": {
+        "url": "https://swapi.co/prod",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/graphql": {
+        "url": "https://swapi.co/v1/graphql",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/prod/": {
+        "url": "https://swapi.co/api/prod/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/internal/": {
+        "url": "https://swapi.co/v1/internal/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/auth/": {
+        "url": "https://swapi.co/auth/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/prod.json": {
+        "url": "https://swapi.co/prod.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/stage.json": {
+        "url": "https://swapi.co/v2/stage.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/graphql.json": {
+        "url": "https://swapi.co/api/graphql.json",
+        "methods_allowed": [
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/soap/": {
+        "url": "https://swapi.co/api/soap/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/v2": {
+        "url": "https://swapi.co/v2/v2",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/graphql.xml": {
+        "url": "https://swapi.co/api/graphql.xml",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/graphql.json": {
+        "url": "https://swapi.co/graphql.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/auth.xml": {
+        "url": "https://swapi.co/api/auth.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/test.xml": {
+        "url": "https://swapi.co/test.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/graphql": {
+        "url": "https://swapi.co/api/graphql",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/admin.xml": {
+        "url": "https://swapi.co/api/admin.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/beta.json": {
+        "url": "https://swapi.co/beta.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/user/": {
+        "url": "https://swapi.co/api/user/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/user": {
+        "url": "https://swapi.co/v2/user",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/oauth.xml": {
+        "url": "https://swapi.co/v2/oauth.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/dev/": {
+        "url": "https://swapi.co/api/dev/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/user.json": {
+        "url": "https://swapi.co/v1/user.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/": {
+        "url": "https://swapi.co/api/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/dev": {
+        "url": "https://swapi.co/v1/dev",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/user/": {
+        "url": "https://swapi.co/v2/user/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/test.xml": {
+        "url": "https://swapi.co/api/test.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/v2.xml": {
+        "url": "https://swapi.co/v1/v2.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/api": {
+        "url": "https://swapi.co/v1/api",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/v2/": {
+        "url": "https://swapi.co/v2/v2/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/soap": {
+        "url": "https://swapi.co/v1/soap",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/internal.xml": {
+        "url": "https://swapi.co/v2/internal.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2.json": {
+        "url": "https://swapi.co/v2.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/test.xml": {
+        "url": "https://swapi.co/v1/test.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/rest": {
+        "url": "https://swapi.co/v2/rest",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/dev.json": {
+        "url": "https://swapi.co/dev.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/login.xml": {
+        "url": "https://swapi.co/v1/login.xml",
+        "methods_allowed": [
+          "POST",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api.xml": {
+        "url": "https://swapi.co/api.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/v3.xml": {
+        "url": "https://swapi.co/api/v3.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/api.json": {
+        "url": "https://swapi.co/v2/api.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/api/": {
+        "url": "https://swapi.co/v2/api/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/login.xml": {
+        "url": "https://swapi.co/v2/login.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/stage/": {
+        "url": "https://swapi.co/stage/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/": {
+        "url": "https://swapi.co/v2/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/test/": {
+        "url": "https://swapi.co/v1/test/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v3/": {
+        "url": "https://swapi.co/v3/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/api": {
+        "url": "https://swapi.co/v2/api",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/dev/": {
+        "url": "https://swapi.co/v1/dev/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/rest.xml": {
+        "url": "https://swapi.co/api/rest.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/prod": {
+        "url": "https://swapi.co/api/prod",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/dev/": {
+        "url": "https://swapi.co/v2/dev/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/test.json": {
+        "url": "https://swapi.co/test.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/prod.xml": {
+        "url": "https://swapi.co/v1/prod.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/test.json": {
+        "url": "https://swapi.co/v2/test.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/api.json": {
+        "url": "https://swapi.co/v1/api.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/soap.json": {
+        "url": "https://swapi.co/v1/soap.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/v1.json": {
+        "url": "https://swapi.co/v2/v1.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/login": {
+        "url": "https://swapi.co/v1/login",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/v3.xml": {
+        "url": "https://swapi.co/v2/v3.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/soap.json": {
+        "url": "https://swapi.co/api/soap.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/stage.json": {
+        "url": "https://swapi.co/v1/stage.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/v1": {
+        "url": "https://swapi.co/v1/v1",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/rest.json": {
+        "url": "https://swapi.co/v2/rest.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/login": {
+        "url": "https://swapi.co/v2/login",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/api.xml": {
+        "url": "https://swapi.co/v2/api.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/rest.xml": {
+        "url": "https://swapi.co/rest.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/internal": {
+        "url": "https://swapi.co/v1/internal",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/v3": {
+        "url": "https://swapi.co/v1/v3",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/graphql/": {
+        "url": "https://swapi.co/v1/graphql/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/admin.json": {
+        "url": "https://swapi.co/v1/admin.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/beta.xml": {
+        "url": "https://swapi.co/v2/beta.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/test": {
+        "url": "https://swapi.co/v1/test",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/beta.xml": {
+        "url": "https://swapi.co/api/beta.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/soap": {
+        "url": "https://swapi.co/api/soap",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/login.json": {
+        "url": "https://swapi.co/v1/login.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/v1/": {
+        "url": "https://swapi.co/api/v1/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/auth.json": {
+        "url": "https://swapi.co/v1/auth.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/soap.xml": {
+        "url": "https://swapi.co/v2/soap.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/oauth": {
+        "url": "https://swapi.co/oauth",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/prod.xml": {
+        "url": "https://swapi.co/prod.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/admin/": {
+        "url": "https://swapi.co/v1/admin/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/beta": {
+        "url": "https://swapi.co/beta",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/beta/": {
+        "url": "https://swapi.co/api/beta/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/stage/": {
+        "url": "https://swapi.co/v1/stage/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/login/": {
+        "url": "https://swapi.co/login/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/prod/": {
+        "url": "https://swapi.co/v1/prod/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/auth": {
+        "url": "https://swapi.co/v1/auth",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/stage": {
+        "url": "https://swapi.co/v1/stage",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/user.json": {
+        "url": "https://swapi.co/v2/user.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/auth.json": {
+        "url": "https://swapi.co/v2/auth.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/v3.xml": {
+        "url": "https://swapi.co/v1/v3.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/dev": {
+        "url": "https://swapi.co/api/dev",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/user": {
+        "url": "https://swapi.co/api/user",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/dev.json": {
+        "url": "https://swapi.co/v2/dev.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/internal.json": {
+        "url": "https://swapi.co/v1/internal.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/login/": {
+        "url": "https://swapi.co/v2/login/",
+        "methods_allowed": [
+          "POST",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/oauth.xml": {
+        "url": "https://swapi.co/api/oauth.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/beta": {
+        "url": "https://swapi.co/api/beta",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/login.json": {
+        "url": "https://swapi.co/login.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/user.json": {
+        "url": "https://swapi.co/api/user.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v3": {
+        "url": "https://swapi.co/v3",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/admin": {
+        "url": "https://swapi.co/v1/admin",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/beta/": {
+        "url": "https://swapi.co/v2/beta/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/test/": {
+        "url": "https://swapi.co/api/test/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/internal": {
+        "url": "https://swapi.co/v2/internal",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/auth.xml": {
+        "url": "https://swapi.co/v1/auth.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/v1/": {
+        "url": "https://swapi.co/v1/v1/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/test": {
+        "url": "https://swapi.co/api/test",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/graphql/": {
+        "url": "https://swapi.co/api/graphql/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/v2": {
+        "url": "https://swapi.co/api/v2",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/internal/": {
+        "url": "https://swapi.co/v2/internal/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/login.xml": {
+        "url": "https://swapi.co/login.xml",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/test": {
+        "url": "https://swapi.co/v2/test",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api.json": {
+        "url": "https://swapi.co/api.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/dev": {
+        "url": "https://swapi.co/dev",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/stage/": {
+        "url": "https://swapi.co/api/stage/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/v2.xml": {
+        "url": "https://swapi.co/v2/v2.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/auth/": {
+        "url": "https://swapi.co/v1/auth/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/user": {
+        "url": "https://swapi.co/v1/user",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/rest/": {
+        "url": "https://swapi.co/v1/rest/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/prod.json": {
+        "url": "https://swapi.co/v2/prod.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/soap": {
+        "url": "https://swapi.co/v2/soap",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/v1.json": {
+        "url": "https://swapi.co/api/v1.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/auth.json": {
+        "url": "https://swapi.co/api/auth.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/admin/": {
+        "url": "https://swapi.co/admin/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/dev.json": {
+        "url": "https://swapi.co/v1/dev.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/login/": {
+        "url": "https://swapi.co/v1/login/",
+        "methods_allowed": [
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/internal.json": {
+        "url": "https://swapi.co/v2/internal.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/v2/": {
+        "url": "https://swapi.co/v1/v2/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/admin.json": {
+        "url": "https://swapi.co/v2/admin.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/v2/": {
+        "url": "https://swapi.co/api/v2/",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v1/internal.xml": {
+        "url": "https://swapi.co/v1/internal.xml",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/api.xml": {
+        "url": "https://swapi.co/api/api.xml",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/v3.json": {
+        "url": "https://swapi.co/api/v3.json",
+        "methods_allowed": [],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/api": {
+        "url": "https://swapi.co/api/api",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "DELETE",
+          "PATCH"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/login": {
+        "url": "https://swapi.co/login",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/v2/login.json": {
+        "url": "https://swapi.co/v2/login.json",
+        "methods_allowed": [
+          "POST",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/api/": {
+        "url": "https://swapi.co/api/api/",
+        "methods_allowed": [
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/login.xml": {
+        "url": "https://swapi.co/api/login.xml",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/login/": {
+        "url": "https://swapi.co/api/login/",
+        "methods_allowed": [
+          "PATCH"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/api.json": {
+        "url": "https://swapi.co/api/api.json",
+        "methods_allowed": [
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/login.json": {
+        "url": "https://swapi.co/api/login.json",
+        "methods_allowed": [
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi.co/api/login": {
+        "url": "https://swapi.co/api/login",
+        "methods_allowed": [
+          "POST",
+          "PUT",
+          "DELETE",
+          "PATCH",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      }
+    },
+    "vulnerabilities": [
+      {
+        "url": "https://swapi.co/v2/stage",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v1.xml",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v2/v3.json",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v1.xml",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v2/stage",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v1/rest.json",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v2/v3.json",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v1/user/",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/oauth.json",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v1/user/",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/soap.xml",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/dev.json",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/oauth.json",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v1/rest.json",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/graphql/",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/dev.json",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/graphql/",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/soap.xml",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v2/beta",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/stage",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v2/beta",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/beta/",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/stage",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/soap.xml",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/soap.xml",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/oauth.xml",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v1/oauth",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/oauth.xml",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v1/oauth",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/test.json",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v1/oauth.xml",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/test.json",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/auth.xml",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/prod/",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/auth.xml",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v2/prod",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v1/prod",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/prod/",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v1/prod",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v2/prod",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/user.xml",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/user.xml",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v2/admin",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v2/dev.xml",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/admin.json",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/test",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/admin.json",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v2/test.xml",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/rest.json",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v2/dev.xml",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v2/admin",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/test",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/admin.json",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/admin.json",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v2/test.xml",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/rest.json",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/v1.xml",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/beta.json",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/internal.xml",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/prod.json",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/beta.json",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/internal",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/internal.xml",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/prod.json",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/internal/",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/internal.xml",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/prod.xml",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/internal",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/internal/",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/auth/",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/internal.xml",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/auth",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/graphql.xml",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/auth/",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/auth",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/graphql.xml",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/login.xml",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v1/login/",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/login",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/api.xml",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/login.xml",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/login.xml",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/login",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v1/login/",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/api.xml",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/v2/login.json",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/login",
+        "type": "dangerous_method_put",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "PUT",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/login.xml",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/api",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      },
+      {
+        "url": "https://swapi.co/api/login",
+        "type": "dangerous_method_delete",
+        "severity": "MEDIUM",
+        "details": {
+          "method": "DELETE",
+          "status_code": 404
+        }
+      }
+    ],
+    "summary": {
+      "total_vulnerabilities": 92,
+      "by_severity": {
+        "HIGH": 0,
+        "MEDIUM": 92,
+        "LOW": 0
+      },
+      "by_type": {
+        "dangerous_method_put": 45,
+        "dangerous_method_delete": 47
+      }
+    }
+  }
+}

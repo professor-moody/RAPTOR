@@ -1,0 +1,80 @@
+{
+  "scan_info": {
+    "base_url": "https://swapi-graphql.netlify.app/.netlify/functions/index",
+    "scan_time": "2025-01-23T16:42:47.275576",
+    "options": {
+      "threads": 10,
+      "timeout": 30,
+      "verbose": false,
+      "quiet": false
+    }
+  },
+  "discovery": {
+    "endpoints_found": 2,
+    "endpoints": [
+      "https://swapi-graphql.netlify.app/graphql",
+      "https://swapi-graphql.netlify.app/graphql/"
+    ]
+  },
+  "authentication": {
+    "auth_methods": [],
+    "endpoints_checked": 0,
+    "auth_findings": [],
+    "summary": {
+      "total_auth_methods": 0,
+      "total_endpoints_with_auth": 0,
+      "primary_auth_provider": null
+    }
+  },
+  "fuzzing": {
+    "endpoint_results": {
+      "https://swapi-graphql.netlify.app/graphql": {
+        "url": "https://swapi-graphql.netlify.app/graphql",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      },
+      "https://swapi-graphql.netlify.app/graphql/": {
+        "url": "https://swapi-graphql.netlify.app/graphql/",
+        "methods_allowed": [
+          "GET",
+          "POST",
+          "OPTIONS"
+        ],
+        "vulnerabilities": []
+      }
+    },
+    "vulnerabilities": [
+      {
+        "url": "https://swapi-graphql.netlify.app/graphql",
+        "type": "cors_misconfiguration",
+        "severity": "MEDIUM",
+        "details": {
+          "header": "access-control-allow-origin: *"
+        }
+      },
+      {
+        "url": "https://swapi-graphql.netlify.app/graphql/",
+        "type": "cors_misconfiguration",
+        "severity": "MEDIUM",
+        "details": {
+          "header": "access-control-allow-origin: *"
+        }
+      }
+    ],
+    "summary": {
+      "total_vulnerabilities": 2,
+      "by_severity": {
+        "HIGH": 0,
+        "MEDIUM": 2,
+        "LOW": 0
+      },
+      "by_type": {
+        "cors_misconfiguration": 2
+      }
+    }
+  }
+}
