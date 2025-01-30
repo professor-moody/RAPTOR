@@ -17,6 +17,7 @@ from output.formatter import OutputFormatter
 from output.report_handler import ReportHandler  # Add this line
 from fuzzing import FuzzingAnalyzer, DiscoveryFuzzer
 from auth import AuthDetector
+from graphql import GraphQLAnalyzer
 
 # Setup logging
 logger = logging.getLogger(__name__)
@@ -117,29 +118,37 @@ class RAPTOR:
             raise
 
     def scan(self) -> Dict[str, Any]:
-        """Execute full RAPTOR scan"""
-        logger.info(f"Starting scan of {self.base_url}")
         try:
             results = {
                 'scan_info': {
-                    'base_url': self.base_url,
-                    'scan_time': datetime.now().isoformat(),
-                    'options': self.options
-                }
+                'base_url': self.base_url,
+                'scan_time': datetime.now().isoformat(),
+                'options': self.options
             }
-            
-            # Phase 1: Endpoint Discovery
-            logger.info("Starting endpoint discovery phase")
-            print(self.formatter.info("\nStarting endpoint discovery..."))
-            
+        }
+        
+        # Phase 1: Endpoint Discovery
             self.discovered_endpoints = self.discovery_fuzzer.discover(
                 threads=self.options.get('threads', 10)
-            )
-            
+        )
+        
             results['discovery'] = {
                 'endpoints_found': len(self.discovered_endpoints),
                 'endpoints': sorted(list(self.discovered_endpoints))
-            }
+        }
+        
+        # Phase 2: GraphQL Analysis
+            logger.info("Starting GraphQL analysis phase")
+            print(self.formatter.info("\nStarting GraphQL analysis..."))
+            graphql_analyzer = GraphQLAnalyzer(self.session, self.base_url, self.formatter)
+            graphql_results = graphql_analyzer.analyze()
+        
+            if graphql_results.get('endpoints'):
+                results['graphql'] = graphql_results
+            # Add GraphQL endpoints to discovered endpoints
+                self.discovered_endpoints.update(graphql_results['endpoints'].keys())
+            
+        # Continue with auth and fuzzing phases...
             
             if self.discovered_endpoints:
                 # Phase 2: Authentication Detection
